@@ -1,0 +1,45 @@
+<h3>Автомобиль!</h3>
+<!--<table class="table">
+        <tr ng-repeat="(key, value) in selectedAuto">
+            <td>{{ key }}</td>
+            <td>{{ value }}</td>
+        </tr>
+</table>-->
+<div class="col-lg-8">
+    <div ui-view>
+        <div class="jumbotron text-center">
+      <form action="{% url 'change_mark' %}" method="post">
+     {% csrf_token %}
+      Марка автомобиля <input type="text" id="name" value="{{ selectedAuto.name }}"/>
+      <input type="submit" value="Изменить">
+      </form>
+        </div>
+    </div>
+
+</div>
+
+
+
+<!--
+<div class="col-lg-4">
+
+    <ul class="nav nav-list">
+        <li>
+            <a ui-sref="auto_model.view({car_modelId:car_model.id})"> <span class="glyphicon glyphicon-plus"></span> Добавить модель</a>
+        </li>
+        <li ng-repeat="auto_model in auto_models">
+            <a ui-sref="auto_model.view({car_modelId:car_model.id})">{{ auto_model.name }}</a>
+        </li>
+    </ul>
+</div>
+
+<div class="col-lg-8">
+    <div ui-view>
+        <div class="jumbotron text-center">
+
+            <p><span class="glyphicon glyphicon-asterisk"></span> <i>Здесь надо сделать возможность добавлять новые марки автомобилей и редактировать их</i></p>
+        </div>
+    </div>
+
+</div>
+-->

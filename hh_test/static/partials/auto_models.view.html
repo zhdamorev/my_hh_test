@@ -1,0 +1,15 @@
+<h3>Автомобиль!</h3>
+
+<div class="col-lg-8">
+    <div ui-view>
+        <div class="jumbotron text-center">
+      <form>
+      Марка автомобиля <input type="text" ng-model="selectedAuto.name"  value="{{ selectedAuto.name }}"/>
+      <input type="submit" ng-click=update(selectedAuto) value="Изменить">
+      </form>
+        </div>
+    </div>
+
+</div>
+
+
